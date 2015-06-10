@@ -1,0 +1,1 @@
+\\illinois\cms\spiusers1\mike.cherry\visual studio 2010\Projects\Encoder\Encoder\bin\Release\Encoder.exe.config

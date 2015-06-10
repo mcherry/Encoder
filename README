@@ -1,0 +1,3 @@
+A utility to generate password hashes in various flavors. Useful for things such as a kickstart script when you need to embed an encrypted password for authentication.
+
+Uses the CryptSharp library - http://www.zer7.com/software/cryptsharp

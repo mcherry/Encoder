@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E508387-DBA6-4D2B-8971-672256D9DBE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Encoder</RootNamespace>
+    <AssemblyName>Encoder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Double-J-Design-Ravenna-3d-Lock.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Encoder.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CryptSharp\BlowfishCrypter.cs" />
+    <Compile Include="CryptSharp\BlowfishCrypterVariant.cs" />
+    <Compile Include="CryptSharp\Crypter.Common.cs" />
+    <Compile Include="CryptSharp\Crypter.cs" />
+    <Compile Include="CryptSharp\CrypterEnvironment.cs" />
+    <Compile Include="CryptSharp\CrypterOption.cs" />
+    <Compile Include="CryptSharp\CrypterOptionKey.cs" />
+    <Compile Include="CryptSharp\CrypterOptions.cs" />
+    <Compile Include="CryptSharp\CrypterProperty.cs" />
+    <Compile Include="CryptSharp\ExtendedDesCrypter.cs" />
+    <Compile Include="CryptSharp\Internal\BitMath.cs" />
+    <Compile Include="CryptSharp\Internal\BitPacking.cs" />
+    <Compile Include="CryptSharp\Internal\ByteArray.cs" />
+    <Compile Include="CryptSharp\Internal\Check.cs" />
+    <Compile Include="CryptSharp\Internal\Exceptions.cs" />
+    <Compile Include="CryptSharp\Internal\Security.cs" />
+    <Compile Include="CryptSharp\LdapCrypter.cs" />
+    <Compile Include="CryptSharp\LdapCrypterOption.cs" />
+    <Compile Include="CryptSharp\LdapCrypterVariant.cs" />
+    <Compile Include="CryptSharp\MD5Crypter.cs" />
+    <Compile Include="CryptSharp\MD5CrypterVariant.cs" />
+    <Compile Include="CryptSharp\PhpassCrypter.cs" />
+    <Compile Include="CryptSharp\PhpassCrypterVariant.cs" />
+    <Compile Include="CryptSharp\Sha256Crypter.cs" />
+    <Compile Include="CryptSharp\Sha512Crypter.cs" />
+    <Compile Include="CryptSharp\ShaCrypter.cs" />
+    <Compile Include="CryptSharp\TraditionalDesCrypter.cs" />
+    <Compile Include="CryptSharp\Utility\Base16Encoding.cs" />
+    <Compile Include="CryptSharp\Utility\Base2Encoding.cs" />
+    <Compile Include="CryptSharp\Utility\Base32Encoding.cs" />
+    <Compile Include="CryptSharp\Utility\Base64Encoding.cs" />
+    <Compile Include="CryptSharp\Utility\BaseEncoding.cs" />
+    <Compile Include="CryptSharp\Utility\BaseEncoding.Decoding.cs" />
+    <Compile Include="CryptSharp\Utility\BaseEncoding.Encoding.cs" />
+    <Compile Include="CryptSharp\Utility\BlowfishCipher.Constants.cs" />
+    <Compile Include="CryptSharp\Utility\BlowfishCipher.cs" />
+    <Compile Include="CryptSharp\Utility\DesCipher.Constants.cs" />
+    <Compile Include="CryptSharp\Utility\DesCipher.cs" />
+    <Compile Include="CryptSharp\Utility\EksBlowfishKeyExpansionFlags.cs" />
+    <Compile Include="CryptSharp\Utility\Pbkdf2.cs" />
+    <Compile Include="CryptSharp\Utility\Salsa20Core.cs" />
+    <Compile Include="CryptSharp\Utility\SCrypt.cs" />
+    <Compile Include="CryptSharp\Utility\SecureComparison.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CryptSharp\CryptSharp.csproj" />
+    <Content Include="Double-J-Design-Ravenna-3d-Lock.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
